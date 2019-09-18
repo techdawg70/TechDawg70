@@ -14,7 +14,7 @@ Import-Module Azure -ErrorAction SilentlyContinue
     $DeployRegion            = "<SELECT AZURE REGION>"
 
     $Branch                  = "master"
-    $AssetLocation           = "https://github.com/techdawg70/TechDawg70/tree/master/lab-hybrid-adfs/$Branch/lab-hybrid-adfs/"
+    $AssetLocation           = "https://github.com/techdawg70/TechDawg70/lab-hybrid-adfs/"
 
     $userName                = "<AD ADMINISTRATOR LOGIN>"
     $secpasswd               = “<AD ADMINISTRATOR PASSWORD>”
@@ -45,7 +45,7 @@ Import-Module Azure -ErrorAction SilentlyContinue
 #END DEPLOYMENT OPTIONS
 
 #Dot-sourced variable override (optional, comment out if not using)
-. C:\dev\A_CustomDeploySettings\lab-hybrid-adfs.ps1
+#. C:\Users\noellis\Documents\Microsoft\Technical\Azure Stack\ADFS\ADFS_Hybrid_Lab-master\ADFS_Hybrid_Lab-master\lab-hybrid-adfs.ps1
 
 #ensure we're logged in
 Get-AzureRmContext -ErrorAction Stop
