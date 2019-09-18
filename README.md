@@ -4,8 +4,8 @@
 
 Description | Link
 --- | ---
-Full deploy - AD, ADFS, WAP | <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fgithub.com%2Ftechdawg70%2Ftechdawg70%2Flab-hybrid-adfs%2FNoClientDeploy.json" target="_blank"><img src="http://azuredeploy.net/deploybutton.png"/></a>
-Full deploy - AD, ADFS, WAP, _with client machines*_ | <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fgithub.com%2Ftechdawg70%2Ftechdawg70%2Flab-hybrid-adfs%2FFullDeploy.json" target="_blank"><img src="http://azuredeploy.net/deploybutton.png"/></a>
+Full deploy - AD, ADFS, WAP | <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fgithub.com%2Ftechdawg70%2Ftechdawg70%2Ftree%2Fmaster%2Flab-hybrid-adfs%2FNoClientDeploy.json" target="_blank"><img src="http://azuredeploy.net/deploybutton.png"/></a>
+Full deploy - AD, ADFS, WAP, _with client machines*_ | <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fgithub.com%2Ftechdawg70%2Ftechdawg70%2Ftree%2Fmaster%2Flab-hybrid-adfs%2FFullDeploy.json" target="_blank"><img src="http://azuredeploy.net/deploybutton.png"/></a>
 
 ## Details
 * Deploys the following infrastructure:
@@ -72,7 +72,7 @@ if ($ctx.SubscriptionName -ne $AzureSub) { Set-AzureRmContext -SubscriptionName 
     $clientsToDeploy         = @("7")
     $clientImageBaseResource = "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/ImageRG/providers/Microsoft.Compute/images/"
     $AdfsFarmCount           = "1";
-    $AssetLocation           = "https://github.com/techdawg70/TechDawg70/lab-hybrid-adfs/"
+    $AssetLocation           = "https://github.com/techdawg70/TechDawg70/tree/master/lab-hybrid-adfs/"
 
     $usersArray              = @(
                                 @{ "FName"= "Bob"; "LName"= "Jones"; "SAM"= "bjones" },
