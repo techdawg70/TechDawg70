@@ -4,8 +4,8 @@
 
 Description | Link
 --- | ---
-Full deploy - AD, ADFS, WAP | <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure-Samples%2Factive-directory-lab-hybrid-adfs%2Fmaster%2Flab-hybrid-adfs%2FNoClientDeploy.json" target="_blank"><img src="http://azuredeploy.net/deploybutton.png"/></a>
-Full deploy - AD, ADFS, WAP, _with client machines*_ | <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure-Samples%2Factive-directory-lab-hybrid-adfs%2Fmaster%2Flab-hybrid-adfs%2FFullDeploy.json" target="_blank"><img src="http://azuredeploy.net/deploybutton.png"/></a>
+Full deploy - AD, ADFS, WAP | <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fgithub.com%2Ftechdawg70%2Ftechdawg70%2Flab-hybrid-adfs%2FNoClientDeploy.json" target="_blank"><img src="http://azuredeploy.net/deploybutton.png"/></a>
+Full deploy - AD, ADFS, WAP, _with client machines*_ | <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fgithub.com%2Ftechdawg70%2Ftechdawg70%2Flab-hybrid-adfs%2FFullDeploy.json" target="_blank"><img src="http://azuredeploy.net/deploybutton.png"/></a>
 
 ## Details
 * Deploys the following infrastructure:
@@ -52,7 +52,7 @@ The "deploy.ps1" file above can be downloaded and run locally against this repo,
 * It will then create an RDP connectoid in that folder for each server and client that was deployed.
 * It will then create an HTTP shortcut to the ADFS WAP endpoint for testing and confirming the deployment.
 
-The deploy script master has a [line](https://github.com/techdawg70/TechDawg70/blob/master/lab-hybrid-adfs/deploy.ps1#L48) that allows you to separate your specific variables from the master via dot-sourcing. Here's a sample dot-sourced variable overrides file:
+The deploy script master has a [line]("https://github.com/techdawg70/TechDawg70/lab-hybrid-adfs/deploy.ps1#L48) that allows you to separate your specific variables from the master via dot-sourcing. Here's a sample dot-sourced variable overrides file:
 ```powershell
 #Login if necessary
 $AzureSub = "My Azure Subscription"try { $ctx=Get-AzureRmContext -ErrorAction Stop }
@@ -72,7 +72,7 @@ if ($ctx.SubscriptionName -ne $AzureSub) { Set-AzureRmContext -SubscriptionName 
     $clientsToDeploy         = @("7")
     $clientImageBaseResource = "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/ImageRG/providers/Microsoft.Compute/images/"
     $AdfsFarmCount           = "1";
-    $AssetLocation           = "https://github.com/techdawg70/TechDawg70/$Branch/lab-hybrid-adfs/"
+    $AssetLocation           = "https://github.com/techdawg70/TechDawg70/lab-hybrid-adfs/"
 
     $usersArray              = @(
                                 @{ "FName"= "Bob"; "LName"= "Jones"; "SAM"= "bjones" },
